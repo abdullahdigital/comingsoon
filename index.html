@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Coming Soon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="click.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="phone.css">
+
+<style>
+    *{
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .bigimage {
+      height: 100vh;
+      width: 100vw;
+      background-image: url(img/space.webp)  ;
+      background-position: center;
+      background-size: cover;
+  
+}
+.footer{
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+.nav-link1{
+  color: white;
+}
+.rocket{
+  position: absolute;
+   left: 45%;
+   bottom: 0;
+  width: 44rem;
+  animation: rocket 4s linear infinite;
+}
+@keyframes rocket{
+  0%{
+    bottom: 0;
+    opacity: 0;
+  }
+  100%{
+    bottom: 85%;
+    opacity: 1;
+  }
+}
+.white{
+  color: white;
+}
+.red{
+  color: red;
+}
+.full-content{
+  position: absolute;
+  top: 30%;
+  left: 8%;
+}
+.f{
+  font-size: 2.5rem;
+}
+.launch-time div{
+  flex-basis: 100px;
+}
+.launch-time div p{
+  font-size: 60px;
+  margin-top: -14px;
+  margin-bottom: -14px;
+}
+
+
+
+</style>
+</head>
+ <body>
+  <!-- If you want to add click feature add this (class="enlargeable-image") -->
+
+  <div id="preloader"></div>
+
+  
+ 
+<div class="bigimage">
+  <nav class="navbar navbar-expand-lg  ps-5 pe-5 ">
+    <div class="container-fluid">
+      <a class="navbar-brand me-5 nav-link1" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ">
+          <a class="nav-link  ps-5 pe-5 me-4 ms-5 nav-link1" aria-current="page" href="#">Home</a>
+          <a class="nav-link ps-5 pe-5 me-4 ms-5 nav-link1" href="#">About Us</a>
+          <a class="nav-link ps-5 pe-5 me-4 ms-5 nav-link1" href="#">Contact Us</a>
+          <a class="nav-link  ps-5 pe-5 me-4 ms-5 nav-link1">Features</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+<div class="full-content white">
+  <p class="f">Be patient</p>
+  <p class="f">Your Website is gonna be <span class="red">Ready Soon !!</span></p>
+<div class="launch-time d-flex">
+  <div >
+    <p id="days">00</p>
+    <span>Days</span>
+  </div>
+  <div>
+    <p id="hours">00</p>
+    <span>Hours</span>
+  </div>
+  <div>
+    <p id="minutes">00</p>
+    <span>Minutes</span>
+  </div>
+  <div>
+    <p id="seconds">00</p>
+    <span>Seconds</span>
+  </div>
+</div>
+
+
+  <button class="btn btn-danger mt-3">Learn more</button>
+
+</div>
+
+
+
+
+  <div>
+    <img src="img/rocket3.png" alt="" class="rocket">
+  </div>
+
+
+
+
+<div class="footer">
+  © Copyright 2023 <a href="https://www.instagram.com/abdullahjani100/">@abdullahjani100.</a> All Rights Reserved.
+</div>
+</div>
+
+
+
+<script>
+  var countDownDate=new Date("Jul 12,2023 23:12:33").getTime();
+  var x=setInterval(function(){
+    var now=new Date().getTime();
+    var distance=countDownDate - now
+
+   var days=Math.floor(distance/(1000 * 60 *60 * 24));
+   var hours=Math.floor((distance % (1000 * 60 *60 * 24)) / (1000 * 60 * 60))
+   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+   var seconds=Math.floor((distance % (1000 * 60 )) / (1000));
+
+   document.getElementById("days").innerHTML=days
+   document.getElementById("hours").innerHTML=hours
+   document.getElementById("minutes").innerHTML=minutes
+   document.getElementById("seconds").innerHTML=seconds
+
+   if (distance < 0){
+    clearInterval(x);
+    document.getElementById("days").innerHTML="00";
+    document.getElementById("hours").innerHTML="00";
+    document.getElementById("minutes").innerHTML="00";
+    document.getElementById("seconds").innerHTML="00";
+   }
+
+  },1000)
+</script>
+
+  
+
+<script>
+  var loader=document.getElementById("preloader");
+window.addEventListener("load",function(){
+loader.style.display = "none";
+})
+</script>
+
+
+<script src="click.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ </body>
+</html>
