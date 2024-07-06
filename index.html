@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Coming Soon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/logo7.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="click.css">
@@ -23,15 +24,24 @@
     .bigimage {
       height: 100vh;
       width: 100vw;
+      max-width: 100%;
+      max-height: 100%;
       background-image: url(img/space.webp)  ;
       background-position: center;
       background-size: cover;
-  
+      position: relative;
 }
+.navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
 .footer{
   color: white;
   position: absolute;
   bottom: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  max-width: 100%;
 }
 .nav-link1{
   color: white;
@@ -75,13 +85,24 @@
   margin-top: -14px;
   margin-bottom: -14px;
 }
+.btn{
+  font-size: 1.1rem; 
+    padding: 4px 17px; 
+    border-radius: 10px; 
+}
+.nav-link1 {
+    color: white;
+    transition: color 0.3s;
+}
 
-
+.nav-link1:hover {
+    color: cyan; 
+    font-size: 1.3rem;
+}
 
 </style>
 </head>
  <body>
-  <!-- If you want to add click feature add this (class="enlargeable-image") -->
 
   <div id="preloader"></div>
 
@@ -90,16 +111,16 @@
 <div class="bigimage">
   <nav class="navbar navbar-expand-lg  ps-5 pe-5 ">
     <div class="container-fluid">
-      <a class="navbar-brand me-5 nav-link1" href="#">Logo</a>
+      <a class="navbar-brand me-5 nav-link1" href="#"><img src="img/logo7.png" class="enlargeable-image" alt="" width="70rem"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
-          <a class="nav-link  ps-5 pe-5 me-4 ms-5 nav-link1" aria-current="page" href="#">Home</a>
-          <a class="nav-link ps-5 pe-5 me-4 ms-5 nav-link1" href="#">About Us</a>
-          <a class="nav-link ps-5 pe-5 me-4 ms-5 nav-link1" href="#">Contact Us</a>
-          <a class="nav-link  ps-5 pe-5 me-4 ms-5 nav-link1">Features</a>
+          <a class="nav-link  ps-5 pe-5 me-4 ms-5 nav-link1" aria-current="page" href="/">Home</a>
+          <a class="nav-link ps-5 pe-5 me-4 ms-5 nav-link1" href="https://www.facebook.com/abdullahwebmaster/" target="_blank">Facebook</a>
+          <a class="nav-link ps-5 pe-5 me-4 ms-5 nav-link1" href="https://www.instagram.com/abdullahwebmaster/" target="_blank">Instagram</a>
+          <a class="nav-link  ps-5 pe-5 me-4 ms-5 nav-link1" href="https://www.linkedin.com/in/abdullahdigital/" target="_blank">Linkedin</a>
         </div>
       </div>
     </div>
@@ -128,7 +149,7 @@
 </div>
 
 
-  <button class="btn btn-danger mt-3">Learn more</button>
+  <a class="btn btn-danger mt-3" href="https://www.instagram.com/abdullahwebmaster/" target="_blank">Order Now!!</a>
 
 </div>
 
@@ -142,15 +163,15 @@
 
 
 
-<div class="footer">
-  © Copyright 2023 <a href="https://www.instagram.com/abdullahjani100/">@abdullahjani100.</a> All Rights Reserved.
+<div class="footer container mt-3">
+  © Copyright LifeTime <a href="https://www.instagram.com/abdullahwebmaster/" target="_blank" style="color: rgb(217, 217, 35);">@abdullahwebmaster.</a> All Rights Reserved.
 </div>
 </div>
 
 
 
 <script>
-  var countDownDate=new Date("Jul 12,2023 23:12:33").getTime();
+  var countDownDate=new Date("oct 13,2024 23:12:33").getTime();
   var x=setInterval(function(){
     var now=new Date().getTime();
     var distance=countDownDate - now

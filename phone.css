@@ -1,6 +1,12 @@
-@media screen and (max-width:968px){
-  
-}
-@media screen and (max-width:568px){
- 
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px; 
+    }
+    .rocket {
+        width: 30rem; 
+        margin-right: 20px !important;
+    }
+    .navbar-toggler{
+        background-color: rgb(244, 244, 44);
+    }
 }
